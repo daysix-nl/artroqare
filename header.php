@@ -92,7 +92,7 @@
                 </div>
             </a>
             <?php endif; ?>
-            <button class="hamburger-button">
+            <button class="hamburger-button md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20">
                     <g id="Group_130" data-name="Group 130" transform="translate(-323 -49)">
                         <line id="Line_20" data-name="Line 20" x2="26" transform="translate(323 68.5)" fill="none" stroke="#064f51" stroke-width="1"/>
