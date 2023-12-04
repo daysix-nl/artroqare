@@ -432,7 +432,7 @@ function customize_dashboard_menu() {
     if ($current_user_login !== $allowed_user) {
         // Hier kun je de volledige URL/querystrings vinden van de menu-onderdelen die je wilt verbergen:
         $hidden_menu_items_by_url = array(
-            // 'edit.php',
+            'edit.php',
             'edit.php?post_type=acf-field-group',
             'edit-comments.php',
             'themes.php',
@@ -538,7 +538,7 @@ add_action('admin_head', 'add_custom_admin_bar_styles');
 
 
 function vervang_dashboard_footer_tekst() {
-    echo 'Bedrijsnaam';
+    echo 'Attention Seekers';
 }
 
 add_filter('admin_footer_text', 'vervang_dashboard_footer_tekst');
@@ -576,18 +576,18 @@ add_action('init', 'redirect_backend_to_wp_login');
 |
 */
 
-function custom_wp_mail_from($original_email_address) {
-    // Vervang 'jouw@emailadres.com' door het gewenste specifieke e-mailadres
-    return 'noreply@bedrijfsnaam.nl';
-}
+// function custom_wp_mail_from($original_email_address) {
+//     // Vervang 'jouw@emailadres.com' door het gewenste specifieke e-mailadres
+//     return 'noreply@bedrijfsnaam.nl';
+// }
 
-function custom_wp_mail_from_name($original_email_from) {
-    // Vervang 'Jouw Naam' door de gewenste afzender naam
-    return 'Bedrijfsnaam';
-}
+// function custom_wp_mail_from_name($original_email_from) {
+//     // Vervang 'Jouw Naam' door de gewenste afzender naam
+//     return 'Bedrijfsnaam';
+// }
 
-add_filter('wp_mail_from', 'custom_wp_mail_from');
-add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');
+// add_filter('wp_mail_from', 'custom_wp_mail_from');
+// add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');
 
 
 /*

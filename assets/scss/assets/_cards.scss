@@ -1,0 +1,74 @@
+.accordion-item {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 9px;
+
+
+    .accordion {
+        background-color: transparent;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition-delay: .2s;
+        transition-property: border-radius, background-color, color;
+        transition-duration: .2s;
+        border-radius: 9px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        padding: 20px 30px;
+
+        // media query
+        @media (min-width: 768px) {
+            padding: 30px 30px;
+        }
+
+        @media (min-width: 1280px) {
+            padding: 20px 40px;
+        }
+
+        &::after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g id="Group_76" data-name="Group 76" transform="translate(-1098.5 -1431.5)"><line id="Line_13" data-name="Line 13" x2="20" transform="translate(1098.5 1441.5)" fill="none" stroke="%23fff" stroke-width="2"/><line id="Line_14" data-name="Line 14" y1="20" transform="translate(1108.5 1431.5)" fill="none" stroke="%23fff" stroke-width="2"/></g></svg>');
+            position: absolute;
+            right: 30px;
+            transform: translateY(-50%);
+            top: 54%;
+
+            @media (min-width: 768px) {
+                right: 20px;
+            }
+
+            @media (min-width: 1280px) {
+                right: 25px;
+            }
+        }
+
+        &.active {
+            background-color: transparent;
+            border-radius: 9px 9px 0 0;
+
+            &::after {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2"><line id="Line_63" data-name="Line 63" x2="20" transform="translate(0 1)" fill="none" stroke="%23fff" stroke-width="2"/></svg>');
+                top: 42.5%;
+            }
+        }
+    }
+
+    .panel {
+        border-radius: 0 0 9px 9px;
+        overflow: hidden;
+        height: 0;
+        transition: height .2s ease-out;
+    }
+}
+
+
+.dynamic-paragraph {
+    display: none;
+}
+
+.dynamic-paragraph.visible {
+    display: block;
+}

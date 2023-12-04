@@ -60,7 +60,18 @@
                 $link_text = isset($link['title']) ? esc_html($link['title']) : '';
                 $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                 ?>
+<<<<<<< HEAD
                 <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
+=======
+
+                <div class="relative hover-dropdown pt-1">
+                     <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 pb-1" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
+                        <ul class="dropdown-menu absolute hidden bg-white py-[35px] px-[25px] border-[20px] space-y-[15px]">
+                            <li class=""><a class="md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 1</a></li>
+                            <li class=""><a class="md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 2</a></li>
+                        </ul>
+                </div>
+>>>>>>> 1f1288d (Add new files and blocks)
                 <?php
                 endwhile;
             else :
@@ -85,7 +96,7 @@
                 </div>
             </a>
             <?php endif; ?>
-            <!-- <button class="block md:hidden w-[50px]">
+            <button class="hamburger-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20">
                     <g id="Group_130" data-name="Group 130" transform="translate(-323 -49)">
                         <line id="Line_20" data-name="Line 20" x2="26" transform="translate(323 68.5)" fill="none" stroke="#064f51" stroke-width="1"/>
@@ -93,10 +104,18 @@
                         <line id="Line_31" data-name="Line 31" x2="26" transform="translate(323 58.461)" fill="none" stroke="#064f51" stroke-width="1"/>
                     </g>
                 </svg>
-            </button> -->
+            </button>
         </div>
     </div>
 
 </header>
+
+    <div class="menu w-sreen h-[100dvh] blur-header pt-7 px-2 flex flex-col w-full z-50">
+        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/">HOME</a>
+        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/over-ons">OVER ONS</a>
+        <a  class="text-30 leading-60 font-medium text-blue uppercase"href="/nota">NOTA</a>
+        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/contact">CONTACT</a>
+    </div>
+
 
 

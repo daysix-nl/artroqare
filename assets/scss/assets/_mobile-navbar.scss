@@ -1,0 +1,21 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+    a,
+    .accordion-item {
+        border-bottom: 1px solid #EEEEEE;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &.menu--active {
+        transform: translateX(0);
+    }
+}
