@@ -60,9 +60,6 @@
                 $link_text = isset($link['title']) ? esc_html($link['title']) : '';
                 $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                 ?>
-<<<<<<< HEAD
-                <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
-=======
 
                 <div class="relative hover-dropdown pt-1">
                      <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 pb-1" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
@@ -71,7 +68,6 @@
                             <li class=""><a class="md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 2</a></li>
                         </ul>
                 </div>
->>>>>>> 1f1288d (Add new files and blocks)
                 <?php
                 endwhile;
             else :
