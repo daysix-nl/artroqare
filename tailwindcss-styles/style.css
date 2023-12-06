@@ -1418,6 +1418,10 @@ video {
   .md\:leading-45 {
     line-height: 45px;
   }
+
+  .md\:leading-44 {
+    line-height: 44px;
+  }
 }
 @media (min-width: 1200px) {
 
@@ -1641,6 +1645,14 @@ video {
     font-size: 175px;
   }
 
+  .lg\:text-4 {
+    font-size: 4px;
+  }
+
+  .lg\:text-44 {
+    font-size: 44px;
+  }
+
   .lg\:leading-22 {
     line-height: 22px;
   }
@@ -1675,6 +1687,10 @@ video {
 
   .lg\:leading-85 {
     line-height: 85px;
+  }
+
+  .lg\:leading-44 {
+    line-height: 44px;
   }
 }
 @media (min-width: 1352px) {

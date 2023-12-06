@@ -63,9 +63,9 @@
 
                 <div class="relative hover-dropdown pt-1">
                      <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 pb-1" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
-                        <ul class="dropdown-menu absolute hidden bg-white py-[35px] px-[25px] border-[20px] space-y-[15px]">
-                            <li class=""><a class="md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 1</a></li>
-                            <li class=""><a class="md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 2</a></li>
+                        <ul class="dropdown-menu absolute hidden bg-white py-[35px] px-[25px] border-[20px]">
+                            <li class=""><a class="md:text-18 md:leading-44 lg:text-24 lg:leading-44 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 1</a></li>
+                            <li class=""><a class="md:text-18 md:leading-44 lg:text-24 lg:leading-44 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 2</a></li>
                         </ul>
                 </div>
                 <?php
