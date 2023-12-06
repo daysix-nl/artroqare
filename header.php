@@ -100,17 +100,49 @@
                         <line id="Line_31" data-name="Line 31" x2="26" transform="translate(323 58.461)" fill="none" stroke="#064f51" stroke-width="1"/>
                     </g>
                 </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23.079" height="23.065" viewBox="0 0 23.079 23.065">
+                    <g id="Group_149" data-name="Group 149" transform="translate(-324.95 -47.455)">
+                        <path id="Path_145" data-name="Path 145" d="M2.3-1.691,24.676,20.666" transform="translate(323 49.5)" fill="none" stroke="#064f51" stroke-width="1"/>
+                        <path id="Path_146" data-name="Path 146" d="M1.818,22.34,24.176,0" transform="translate(323.5 47.809)" fill="none" stroke="#064f51" stroke-width="1"/>
+                    </g>
+                </svg>
             </button>
         </div>
     </div>
 
 </header>
 
-    <div class="menu w-sreen h-[100dvh] blur-header pt-7 px-2 flex flex-col w-full z-50">
-        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/">HOME</a>
-        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/over-ons">OVER ONS</a>
-        <a  class="text-30 leading-60 font-medium text-blue uppercase"href="/nota">NOTA</a>
-        <a class="text-30 leading-60 font-medium text-blue uppercase" href="/contact">CONTACT</a>
+    <div class="menu w-sreen  blur-header pt-7 px-2 flex flex-col w-full z-50 h-auto pb-[38px]">
+        <div class="container  mt-[31px]">
+            <div class="relative">
+                <!-- <div class="inner-submenu">
+                    <div class="flex flex-col">            
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare</button>
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
+                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
+                    </div>
+                </div> -->
+                <div class="inner-menu">
+                    <div class="flex flex-col">            
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare</button>
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
+                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
+                    </div>
+                    <div class="h-[1px] w-full bg-[#707070] mb-[14px] mt-[24px]"></div>
+                    <div class="flex flex-col">
+                        <a class="text-22 leading-44 text-groen" href="#">Contact</a>
+                        <a class="text-22 leading-44 text-groen" href="#">Privacy statement</a>
+                    </div>
+                    <div class="h-[1px] w-full bg-[#707070] mb-[23px] mt-[23px]"></div>
+                    <div class="flex flex-col">
+                        <p class="text-18 leading-38 text-donkergroen">Heeft u directe vragen?</p>
+                        <a class="text-22 leading-37 text-donkergroen" href="mailto:02052356464">020 523 564 64</a>
+                    </div>
+                </div>
+            </div>
+                <a href="#contact" class="w-fit h-[45px] px-[15px] bg-[#FFE862] border-[1px] border-[#FFE862] rounded-[6px] flex items-center justify-between md:justify-normal font-britti font-normal text-19  text-donkergroen hover:bg-[#95CD6C] hover:border-[#95CD6C] duration-300 mt-[29px]">Maak een afspraak→</a>
+      
+        </div>
     </div>
 
 

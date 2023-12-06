@@ -19,16 +19,16 @@ module.exports = {
       },
     },
     screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1200px',
-      'xl': '1352px',
-      '2xl': '1800px',
+      sm: "640px",
+      md: "768px",
+      lg: "1200px",
+      xl: "1352px",
+      "2xl": "1800px",
     },
 
     extend: {
       fontFamily: {
-        "britti": ["Britti", "sans-serif"],
+        britti: ["Britti", "sans-serif"],
       },
       colors: {
         white: "#FFFFFF",
@@ -398,14 +398,14 @@ module.exports = {
       addComponents({
         ".container": {
           maxWidth: "337px",
-          width: "auto",
+          width: "100%",
           marginLeft: "auto",
           marginRight: "auto",
           paddingLeft: "15px",
           paddingRight: "15px",
           "@screen sm": {
             maxWidth: "337px",
-            width: "auto",
+            width: "100%",
           },
           "@screen md": {
             maxWidth: "688px",

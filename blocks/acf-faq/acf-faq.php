@@ -15,7 +15,7 @@
                             <span class="pr-4">Hoe weet ik of ik artrose heb?</span>
                         </button>
                         <div class="panel">
-                            <div class="pb-[45px] px-2 md:pb-4 md:px-3 lg:pb-6 lg:pt-4  lg:px-4">
+                            <div class="pb-3 px-2 md:pb-4 md:px-3 lg:pb-6 lg:pt-4 lg:px-4">
                                 <p class="text-white  text-18 leading-28 lg:text-22 lg:leading-40 lg:max-w-[685px] md:max-w-[604px] max-w-[246px]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                             <span class="pr-4">Hoe weet ik of ik artrose heb?</span>
                         </button>
                         <div class="panel">
-                            <div class="pb-[45px] px-2 md:pb-4 md:px-3 lg:pb-6 lg:pt-4  lg:px-4">
+                            <div class="pb-3 px-2 md:pb-4 md:px-3 lg:pb-6 lg:pt-4 lg:px-4">
                                 <p class="text-white  text-18 leading-28 lg:text-22 lg:leading-40 lg:max-w-[685px] md:max-w-[604px] max-w-[246px]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
                             </div>
                         </div>

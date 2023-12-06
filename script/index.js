@@ -14,26 +14,6 @@ try {
 } catch (error) {}
 
 try {
-  document.addEventListener("DOMContentLoaded", () => {
-    const header = document.getElementById("site-header");
-    const button = document.querySelector(".hamburger-button");
-
-    window.addEventListener("scroll", function () {
-      if (
-        window.scrollY > 5 &&
-        !button.classList.contains("button-hamburger--active")
-      ) {
-        header.classList.remove("bg-transparent");
-        header.classList.add("bg-white");
-      } else {
-        header.classList.remove("bg-white");
-        header.classList.add("bg-transparent");
-      }
-    });
-  });
-} catch (error) {}
-
-try {
   const button = document.querySelector(".hamburger-button");
   const header = document.getElementById("site-header");
   button.addEventListener("click", () => {
@@ -41,11 +21,11 @@ try {
     button.classList.toggle("button-hamburger--active");
     menu.classList.toggle("menu--active");
 
-    console.log(window.offsetTop);
+    console.log(window.scrollY);
 
     if (
       !button.classList.contains("button-hamburger--active") &&
-      window.offsetTop <= 5
+      window.scrollY > 5
     ) {
       header.classList.remove("bg-transparent");
       header.classList.add("bg-white");
@@ -53,6 +33,20 @@ try {
       header.classList.remove("bg-white");
       header.classList.add("bg-transparent");
     }
+
+    if (!button.classList.contains("button-hamburger--active")) {
+      const menu = document.querySelector(".inner-menu");
+      menu.classList.remove("inner_menu--active");
+    }
+  });
+
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const menu = document.querySelector(".inner-menu");
+      menu.classList.add("inner_menu--active");
+    });
   });
 } catch (error) {}
 /**********************/

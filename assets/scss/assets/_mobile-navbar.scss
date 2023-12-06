@@ -5,17 +5,47 @@
     transform: translateX(-100%);
     transition: all 0.3s ease;
     z-index: 1000;
+    visibility: hidden;
 
-    a,
-    .accordion-item {
-        border-bottom: 1px solid #EEEEEE;
-
-        &:last-child {
-            border-bottom: none;
-        }
+    .inner-menu {
+        display: none;
     }
 
     &.menu--active {
         transform: translateX(0);
+        visibility: visible;
+
+        .inner-menu {
+            display: block;
+
+            &.inner_menu--active {
+                transition: .5s ease;
+                transform: translateX(100vw);
+            }
+        }
+    }
+}
+
+.hamburger-button {
+    svg {
+        &:first-of-type {
+            display: block;
+        }
+
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    &.button-hamburger--active {
+        svg {
+            &:first-of-type {
+                display: none;
+            }
+
+            &:last-of-type {
+                display: block;
+            }
+        }
     }
 }
