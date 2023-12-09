@@ -8,7 +8,7 @@
     visibility: hidden;
 
     .inner-menu {
-        display: none;
+        opacity: 0;
     }
 
     &.menu--active {
@@ -17,6 +17,8 @@
 
         .inner-menu {
             display: block;
+            transition: all 0.3s ease;
+            opacity: 1;
 
             &.inner_menu--active {
                 transition: .5s ease;
@@ -47,5 +49,17 @@
                 display: block;
             }
         }
+    }
+}
+
+
+.inner-submenu {
+    transform: translateX(-100vw);
+    transition: all 0.3s ease;
+
+    &.active {
+        transform: translateX(0);
+        transition-delay: 0.3s;
+        transition: all 0.3s ease;
     }
 }

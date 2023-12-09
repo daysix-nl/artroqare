@@ -115,18 +115,24 @@
     <div class="menu w-sreen  blur-header pt-7 px-2 flex flex-col w-full z-50 h-auto pb-[38px]">
         <div class="container  mt-[31px]">
             <div class="relative">
-                <!-- <div class="inner-submenu">
-                    <div class="flex flex-col">            
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare</button>
+                <div class="inner-submenu absolute top-0 left-0 w-screen">
+                    <button class="back-inner-submenu-absolute text-18 leading-26 text-donkergroen mb-1">Terug</button>
+                    <div class="flex flex-col inner-submenu-absolute">            
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare 0</button>
                         <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
                         <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
                     </div>
-                </div> -->
-                <div class="inner-menu">
-                    <div class="flex flex-col">            
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare</button>
+                    <div class="flex flex-col inner-submenu-absolute">            
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare 1</button>
                         <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
                         <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
+                    </div>
+                </div>
+                <div class="inner-menu">
+                    <div class="flex flex-col ">            
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="0" >Over ArtroQare</button>
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="1">Voor wie</button>
+                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="2">Wat is artrose</button>
                     </div>
                     <div class="h-[1px] w-full bg-[#707070] mb-[14px] mt-[24px]"></div>
                     <div class="flex flex-col">

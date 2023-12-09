@@ -14,14 +14,30 @@ try {
 } catch (error) {}
 
 try {
+  addEventListener("scroll", (event) => {
+    const header = document.getElementById("site-header");
+    const button = document.querySelector(".hamburger-button");
+    const menu = document.querySelector(".menu");
+
+    if (window.scrollY > 5) {
+      header.classList.remove("bg-transparent");
+      header.classList.add("bg-white");
+      button.classList.remove("button-hamburger--active");
+      menu.classList.remove("menu--active");
+    } else {
+      header.classList.remove("bg-white");
+      header.classList.add("bg-transparent");
+    }
+  });
+} catch (error) {}
+
+try {
   const button = document.querySelector(".hamburger-button");
   const header = document.getElementById("site-header");
   button.addEventListener("click", () => {
     const menu = document.querySelector(".menu");
     button.classList.toggle("button-hamburger--active");
     menu.classList.toggle("menu--active");
-
-    console.log(window.scrollY);
 
     if (
       !button.classList.contains("button-hamburger--active") &&
@@ -37,18 +53,46 @@ try {
     if (!button.classList.contains("button-hamburger--active")) {
       const menu = document.querySelector(".inner-menu");
       menu.classList.remove("inner_menu--active");
+
+      const innerMenu = document.querySelector(".inner-submenu");
+      innerMenu.classList.remove("active");
     }
   });
 
   const menuItems = document.querySelectorAll(".menu-item");
+  const subMenu = document.querySelectorAll(".inner-submenu-absolute");
 
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
       const menu = document.querySelector(".inner-menu");
+      const innerMenu = document.querySelector(".inner-submenu");
       menu.classList.add("inner_menu--active");
+      innerMenu.classList.add("active");
+
+      subMenu.forEach((itemInner, index) => {
+        itemInner.style.display = "none";
+        const dataBlock = item.getAttribute("data-index-number");
+        if (dataBlock === index.toString()) {
+          itemInner.style.display = "flex";
+        }
+      });
     });
   });
+
+  const backBtn = document.querySelector(".back-inner-submenu-absolute");
+
+  backBtn.addEventListener("click", () => {
+    subMenu.forEach((itemInner) => {
+      itemInner.style.display = "none";
+    });
+
+    const menu = document.querySelector(".inner-menu");
+    const innerMenu = document.querySelector(".inner-submenu");
+    menu.classList.remove("inner_menu--active");
+    innerMenu.classList.remove("active");
+  });
 } catch (error) {}
+
 /**********************/
 /**** accordion ***/
 /**********************/
@@ -95,6 +139,41 @@ try {
         isVisibleCount = 1;
         btnText.innerText = "Lees meer";
       }
+    });
+  });
+} catch (error) {}
+
+try {
+  const sliders = document.querySelectorAll(".mySwiperSlider-1");
+
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".swiper-slide");
+    const middleSlideIndex = Math.floor(slides.length / 2);
+
+    new Swiper(slider, {
+      slidesPerView: 1.3,
+      centeredSlides: true,
+      initialSlide: middleSlideIndex,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.6,
+        },
+        1280: {
+          slidesPerView: 2.4,
+        },
+        1440: {
+          slidesPerView: 2.8,
+        },
+      },
     });
   });
 } catch (error) {}
