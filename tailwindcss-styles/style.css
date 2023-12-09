@@ -1061,6 +1061,9 @@ video {
 .font-normal {
   font-weight: 400;
 }
+.font-semibold {
+  font-weight: 600;
+}
 .leading-12 {
   line-height: 12px;
 }

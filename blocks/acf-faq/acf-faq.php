@@ -11,7 +11,7 @@
                 <div class="space-y-3 md:space-y-[25px] lg:space-y-3">
                     <!-- accordiond -->
                     <div class="accordion-item"> 
-                        <button class="accordion text-white text-18 leading-40 lg:text-22 lg:leading-40 font-bold pr-3">
+                        <button class="accordion text-white text-18 leading-28 lg:text-22 lg:leading-40 font-semibold pr-3">
                             <span class="pr-4">Hoe weet ik of ik artrose heb?</span>
                         </button>
                         <div class="panel">
@@ -22,7 +22,7 @@
                     </div>
                     <!-- accordion -->
                     <div class="accordion-item"> 
-                        <button class="accordion text-white text-18 leading-40 lg:text-22 lg:leading-40 font-bold pr-3">
+                        <button class="accordion text-white text-18 leading-28 lg:text-22 lg:leading-40 font-semibold pr-3">
                             <span class="pr-4">Hoe weet ik of ik artrose heb?</span>
                         </button>
                         <div class="panel">
