@@ -684,6 +684,9 @@ video {
 .mt-\[31px\] {
   margin-top: 31px;
 }
+.mb-4 {
+  margin-bottom: 40px;
+}
 .block {
   display: block;
 }
@@ -742,6 +745,15 @@ video {
 .h-full {
   height: 100%;
 }
+.h-\[161px\] {
+  height: 161px;
+}
+.h-\[198px\] {
+  height: 198px;
+}
+.h-\[32px\] {
+  height: 32px;
+}
 .w-3 {
   width: 30px;
 }
@@ -792,6 +804,30 @@ video {
 .max-w-\[397px\] {
   max-width: 397px;
 }
+.max-w-\[308px\] {
+  max-width: 308px;
+}
+.max-w-\[348px\] {
+  max-width: 348px;
+}
+.max-w-\[368px\] {
+  max-width: 368px;
+}
+.max-w-\[325pxpx\] {
+  max-width: 325pxpx;
+}
+.max-w-\[325px\] {
+  max-width: 325px;
+}
+.max-w-\[358px\] {
+  max-width: 358px;
+}
+.max-w-\[327px\] {
+  max-width: 327px;
+}
+.max-w-\[347px\] {
+  max-width: 347px;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -841,8 +877,17 @@ video {
   margin-top: calc(30px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(30px * var(--tw-space-y-reverse));
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -938,6 +983,9 @@ video {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+.p-0 {
+  padding: 0;
 }
 .px-2 {
   padding-left: 20px;
@@ -1096,6 +1144,9 @@ video {
 }
 .leading-44 {
   line-height: 44px;
+}
+.leading-10 {
+  line-height: 10px;
 }
 .text-\[\#064F51\] {
   --tw-text-opacity: 1;
@@ -1597,6 +1648,10 @@ video {
     height: 800.47px;
   }
 
+  .lg\:h-\[161px\] {
+    height: 161px;
+  }
+
   .lg\:min-h-\[790\.47px\] {
     min-height: 790.47px;
   }
@@ -1645,6 +1700,18 @@ video {
     max-width: 850px;
   }
 
+  .lg\:max-w-\[644px\] {
+    max-width: 644px;
+  }
+
+  .lg\:max-w-\[684px\] {
+    max-width: 684px;
+  }
+
+  .lg\:max-w-\[unset\] {
+    max-width: unset;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1681,6 +1748,11 @@ video {
     padding-bottom: 100px;
   }
 
+  .lg\:py-6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .lg\:pb-4 {
     padding-bottom: 40px;
   }
@@ -1715,6 +1787,10 @@ video {
 
   .lg\:pt-\[15px\] {
     padding-top: 15px;
+  }
+
+  .lg\:pb-\[108px\] {
+    padding-bottom: 108px;
   }
 
   .lg\:text-center {

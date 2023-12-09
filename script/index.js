@@ -177,3 +177,24 @@ try {
     });
   });
 } catch (error) {}
+
+try {
+  const sliders = document.querySelectorAll(".mySwiperSlider-2");
+
+  sliders.forEach((slider) => {
+    new Swiper(slider, {
+      slidesPerView: 1,
+      centeredSlides: true,
+      initialSlide: 1,
+
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+} catch (error) {}
