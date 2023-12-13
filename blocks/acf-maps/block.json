@@ -1,9 +1,9 @@
 {
-  "name": "acf-slider-1",
-  "title": "Slider 1",
+  "name": "acf-maps",
+  "title": "Maps",
   "description": "",
   "category": "bibliotheek",
-  "icon": "slides",
+  "icon": "location-alt",
   "keywords": [
     "block"
   ],
@@ -13,7 +13,7 @@
   },
   "acf": {
     "mode": "preview",
-    "renderTemplate": "acf-slider-1.php"
+    "renderTemplate": "acf-maps.php"
   },
   "example": {
     "attributes": {

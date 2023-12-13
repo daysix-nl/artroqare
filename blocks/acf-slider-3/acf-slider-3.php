@@ -1,30 +1,28 @@
-<section class="bg-donkergroen py-5 lg:py-6">
+<?php
+if (isset($block['data']['preview_image_help'])): ?>
+    <img src="#" style="width:100%; height:auto;">
+    <?php
+else: ?>
+<section id="<?php the_field('id');?>" class="bg-donkergroen <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
   <div class="lg:container max-w-[308px] lg:max-w-[644px] p-0 w-full flex mx-auto">
-    <h2 class="text-40 leading-10 text-white lg:text-85 lg:leading-78 ">Maatschappij</h2>
+    <h2 class="text-40 leading-10 text-white lg:text-85 lg:leading-78 font-britti font-normal"><?php the_field('titel');?></h2>
   </div>
   </div>
     <div class="swiper mySwiperSlider-2 lg:container">
-    <div class="swiper-wrapper py-4 lg:pb-[108px] lg:pt-8">
-      <div class="swiper-slide w-full">
-          <div class="h-auto">
-        <p class="text-18 leading-28 text-white lg:text-22 lg:leading-47 max-w-[308px] lg:max-w-[644px]">or via een externe locatie te werken dicht bij de patiënt, hoeft de patiënt die al moeite heeft om zich te mobiliseren, niet naar het ziekenhuis of kliniek te komen.  
-
-</p>
-</div>
-      </div>
-            <div class="swiper-slide w-full">
-              <div class="h-auto">
-    <p class="text-18 leading-28 text-white lg:text-22 lg:leading-47 max-w-[308px] lg:max-w-[644px]">De zorg zal bij de fysiotherapeut in de buurt van de huisarts van de patiënt geleverd worden. Door via een externe locatie te werken dicht bij de patiënt, hoeft de patiënt die al moeite heeft om zich te mobiliseren, niet naar het ziekenhuis of kliniek te komen.  </p>
-</div>
-      </div>
-
-                  <div class="swiper-slide w-full">
-              <div class="h-auto">
-    <p class="text-18 leading-28 text-white lg:text-22 lg:leading-47 max-w-[308px] lg:max-w-[644px]">De zorg zal bij de fysiotherapeut in de buurt van de huisarts van de patiënt geleverd worden. Door via een externe locatie te werken dicht bij de patiënt, hoeft de patiënt die al moeite heeft om zich te mobiliseren, niet naar het ziekenhuis of kliniek te komen.  
-
-</p>
-</div>
-      </div>
+    <div class="swiper-wrapper py-4 lg:pb-[108px] lg:pt-4">
+       <?php
+      if( have_rows('slider') ):
+          while( have_rows('slider') ) : the_row(); ?>
+             <div class="swiper-slide w-full">
+                <div class="h-auto">
+                  <div class="text-18 leading-28 text-white lg:text-22 lg:leading-47 max-w-[308px] lg:max-w-[644px] font-britti font-normal text-editor"><?php the_sub_field('tekst');?></div>
+                </div>
+            </div>
+          <?php
+          endwhile;
+      else :
+      endif;
+      ?>  
     </div>
     <div class="lg:container relative h-[32px] max-w-[327px]  lg:max-w-[unset] w-full mx-auto">
     <div class="lg:max-w-[644px] p-0 w-full">
@@ -60,3 +58,4 @@
     </div>
   </div>
 </section>
+<?php endif; ?>

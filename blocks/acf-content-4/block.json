@@ -1,9 +1,9 @@
 {
-  "name": "acf-slider-1",
-  "title": "Slider 1",
+  "name": "acf-content-4",
+  "title": "Content 4",
   "description": "",
   "category": "bibliotheek",
-  "icon": "slides",
+  "icon": "editor-alignleft",
   "keywords": [
     "block"
   ],
@@ -13,7 +13,7 @@
   },
   "acf": {
     "mode": "preview",
-    "renderTemplate": "acf-slider-1.php"
+    "renderTemplate": "acf-content-4.php"
   },
   "example": {
     "attributes": {

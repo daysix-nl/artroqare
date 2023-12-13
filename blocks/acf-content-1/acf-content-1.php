@@ -15,7 +15,7 @@ $image_url = isset($image['url']) ? esc_url($image['url']) : '';
 $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
 ?>
 <!-- CONTENT 1 -->
-<section id="<?php the_field('id');?>" class="my-5 <?php the_field('achtergrond');?>">
+<section id="<?php the_field('id');?>" class="<?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
     <div class="container grid grid-cols-1 md:grid-cols-2 items-start xl:items-center gap-3 md:gap-[unset]">
         <div class="">
             <div class="w-[310px] h-[281px] md:h-[275px] md:w-[303px] lg:h-[412px] lg:w-[454px] xl:h-[534px] xl:w-[588px] rounded-[50%/50%] bg-[#707070] overflow-hidden">

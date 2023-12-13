@@ -63,10 +63,25 @@
 
                 <div class="relative hover-dropdown pt-1">
                      <a href="<?php echo $link_url; ?>" class="hidden md:block md:text-18 md:leading-18 lg:text-24 lg:leading-24 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 pb-1" target="<?php echo $link_target; ?>"><?php echo $link_text; ?></a>
-                        <ul class="dropdown-menu absolute hidden bg-white py-[35px] px-[25px] border-[20px]">
-                            <li class=""><a class="md:text-18 md:leading-44 lg:text-24 lg:leading-44 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 1</a></li>
-                            <li class=""><a class="md:text-18 md:leading-44 lg:text-24 lg:leading-44 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="#">Behandeling 2</a></li>
+                        <?php if (get_sub_field('submenu')): ?> 
+                        <ul class="dropdown-menu absolute hidden bg-white py-[25px] px-[20px] border-[20px]">
+                            <?php
+                            if( have_rows('submenu') ):
+                                while( have_rows('submenu') ) : the_row(); ?>
+                                <?php
+                                $link1 = get_sub_field('submenu_link');
+                                $link1_url = isset($link1['url']) ? esc_url($link1['url']) : '';
+                                $link1_text = isset($link1['title']) ? esc_html($link1['title']) : '';
+                                $link1_target = isset($link1['target']) ? esc_attr($link1['target']) : '';
+                                ?>
+                                <li class=""><a class="md:text-18 md:leading-44 lg:text-24 lg:leading-44 font-britti font-normal text-[#064F51] hover:text-[#95CD6C] duration-300" href="<?php echo $link1_url; ?>" target="<?php echo $link1_target; ?>"><?php echo $link1_text; ?></a></li>
+                                <?php
+                                endwhile;
+                            else :
+                            endif;
+                            ?>
                         </ul>
+                        <?php endif; ?>
                 </div>
                 <?php
                 endwhile;
@@ -112,42 +127,69 @@
 
 </header>
 
-    <div class="menu w-sreen  blur-header pt-7 px-2 flex flex-col w-full z-50 h-auto pb-[38px]">
-        <div class="container  mt-[31px]">
+    <div class="menu w-sreen blur-header pt-7 px-2 flex flex-col w-full z-50 h-auto pb-[38px] md:hidden">
+        <div class="container mt-[31px]">
             <div class="relative">
                 <div class="inner-submenu absolute top-0 left-0 w-screen">
-                    <button class="back-inner-submenu-absolute text-18 leading-26 text-donkergroen mb-1">Terug</button>
-                    <div class="flex flex-col inner-submenu-absolute">            
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare 0</button>
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
-                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
-                    </div>
-                    <div class="flex flex-col inner-submenu-absolute">            
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Over ArtroQare 1</button>
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" >Voor wie</button>
-                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start">Wat is artrose</button>
-                    </div>
+                    <button class="back-inner-submenu-absolute text-18 leading-26 text-donkergroen mb-1 font-britti font-normal">Terug</button>
+                    <?php
+                    if( have_rows('hoofdmenu', 'option') ):
+                    while( have_rows('hoofdmenu', 'option') ) : the_row(); ?>
+                        <div class="flex flex-col inner-submenu-absolute"> 
+                            <?php
+                            if( have_rows('submenu') ):
+                                while( have_rows('submenu') ) : the_row(); ?>
+                                <?php
+                                $link1 = get_sub_field('submenu_link');
+                                $link1_url = isset($link1['url']) ? esc_url($link1['url']) : '';
+                                $link1_text = isset($link1['title']) ? esc_html($link1['title']) : '';
+                                $link1_target = isset($link1['target']) ? esc_attr($link1['target']) : '';
+                                ?>
+                                <a  href="<?php echo $link1_url; ?>" class="text-22 leading-44 text-donkergroen font-britti font-normal text-start" target="<?php echo $link1_target; ?>"><?php echo $link1_text; ?></a>
+                                <?php
+                                endwhile;
+                            else :
+                            endif;
+                            ?>
+                        </div>
+                        <?php
+                        endwhile;
+                    else :
+                    endif;
+                    ?>
                 </div>
                 <div class="inner-menu">
                     <div class="flex flex-col ">            
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="0" >Over ArtroQare</button>
-                        <button class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="1">Voor wie</button>
-                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start" data-index-number="2">Wat is artrose</button>
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start font-britti font-normal" data-index-number="0" >Over ArtroQare</button>
+                        <button class="text-22 leading-44 text-donkergroen menu-item text-start font-britti font-normal" data-index-number="1">Voor wie</button>
+                        <button  class="text-22 leading-44 text-donkergroen menu-item text-start font-britti font-normal" data-index-number="2">Wat is artrose</button>
                     </div>
                     <div class="h-[1px] w-full bg-[#707070] mb-[14px] mt-[24px]"></div>
                     <div class="flex flex-col">
-                        <a class="text-22 leading-44 text-groen" href="#">Contact</a>
-                        <a class="text-22 leading-44 text-groen" href="#">Privacy statement</a>
+                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="#">Contact</a>
+                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="#">Privacy statement</a>
                     </div>
                     <div class="h-[1px] w-full bg-[#707070] mb-[23px] mt-[23px]"></div>
                     <div class="flex flex-col">
-                        <p class="text-18 leading-38 text-donkergroen">Heeft u directe vragen?</p>
-                        <a class="text-22 leading-37 text-donkergroen" href="mailto:02052356464">020 523 564 64</a>
+                        <p class="text-18 leading-38 text-donkergroen font-britti font-normal">Heeft u directe vragen?</p>
+                        <a class="text-22 leading-37 text-donkergroen font-britti font-normal" href="mailto:02052356464">020 523 564 64</a>
                     </div>
                 </div>
             </div>
-                <a href="#contact" class="w-fit h-[45px] px-[15px] bg-[#FFE862] border-[1px] border-[#FFE862] rounded-[6px] flex items-center justify-between md:justify-normal font-britti font-normal text-19  text-donkergroen hover:bg-[#95CD6C] hover:border-[#95CD6C] duration-300 mt-[29px]">Maak een afspraak→</a>
-      
+            <?php if (get_field('cta_link', 'option')): ?>   
+            <a href="<?php echo $link_url; ?>" class="flex w-fit h-[45px] px-[15px] bg-[#FFE863] rounded-[6px] items-center font-britti font-normal md:text-19 lg:text-22 text-[#064F51] mt-[29px]"><?php echo $link_text; ?>
+                <div class="ml-[15px]">
+                    <svg width="15px" height="12.862883px" viewBox="0 0 15 12.862883" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="arrow-right-solid" fill="#064F51" fill-rule="nonzero">
+                                <path d="M14.6860874,7.18818014 C15.1046375,6.76963 15.1046375,6.08990457 14.6860874,5.67135443 L9.32864557,0.313912607 C8.91009543,-0.104637536 8.2337184,-0.104637536 7.81516826,0.313912607 C7.39661811,0.732462749 7.39326971,1.41218818 7.81181986,1.83073832 L11.3443831,5.35995312 L1.07148836,5.35995312 C0.478821363,5.35995312 0,5.83877449 0,6.43144149 C0,7.02410849 0.478821363,7.50292985 1.07148836,7.50292985 L11.3410347,7.50292985 L7.81516826,11.0321447 C7.39661811,11.4506948 7.39661811,12.1304202 7.81516826,12.5489704 C8.2337184,12.9675205 8.91344383,12.9675205 9.33199397,12.5489704 L14.6894358,7.19152855 L14.6860874,7.18818014 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </a>
+            <?php endif; ?>
+        
         </div>
     </div>
 

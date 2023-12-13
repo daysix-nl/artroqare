@@ -58,10 +58,69 @@
                 "bg-white": "Wit",
                 "bg-geel": "Geel",
                 "bg-lichtgroen": "Licht groen",
-                "bg-groen": "Groen",
-                "bg-donkergroen": "Donker groen"
+                "bg-groen": "Groen"
             },
             "default_value": "bg-white",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6579c3211ba2e",
+            "label": "Witruimte bovenkant",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding-top-xs": "Extra small",
+                "padding-top-s": "Small",
+                "padding-top-m": "Medium",
+                "padding-top-l": "Large",
+                "padding-top-xl": "Extra large",
+                "pt-0": "None"
+            },
+            "default_value": "pt-0",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6579c3421ba2f",
+            "label": "Witruimte onderkant",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding-bottom-xs": "Extra small",
+                "padding-bottom-s": "Small",
+                "padding-bottom-m": "Medium",
+                "padding-bottom-l": "Large",
+                "padding-bottom-xl": "Extra large",
+                "pb-0": "None"
+            },
+            "default_value": "pb-0",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -88,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700229674
+    "modified": 1702480617
 }

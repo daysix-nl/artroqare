@@ -1,47 +1,30 @@
-  <div class="swiper mySwiperSlider-1">
-    <div class="swiper-wrapper mb-2 lg:mb-6">
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-     <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-       <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
-     <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-5 lg:text-35 lg:leading-40">Dirk–Jan Overvecht</h4>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px]">Orthopedisch chirurg</p>
-        <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30">Fysiotherapeut</p>
-      </div>
+ <?php
+if (isset($block['data']['preview_image_help'])): ?>
+    <img src="#" style="width:100%; height:auto;">
+    <?php
+else: ?>
+ <div id="<?php the_field('id');?>" class="swiper mySwiperSlider-1 <?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
+    <div class="swiper-wrapper mb-2 lg:mb-6"> 
+      <?php
+      if( have_rows('slider') ):
+          while( have_rows('slider') ) : the_row(); ?>
+          <?php
+          $image = get_sub_field('afbeelding');
+          $image_url = isset($image['url']) ? esc_url($image['url']) : '';
+          $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
+          ?>
+             <div class="swiper-slide">
+                <div class="aspect-[1/1]">
+                  <img class="min-w-full min-h-full object-cover" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" />
+                </div>
+                <h4 class="text-18 leading-22 text-donkergroen mt-2 lg:mt-3 lg:text-35 lg:leading-40 font-britti font-normal"><?php the_sub_field('titel');?></h4>
+                <p class="text-16 leading-18 text-groen lg:text-25 lg:leading-30 mt-[15px] font-britti font-normal"><?php the_sub_field('subtitel');?></p>
+            </div>
+          <?php
+          endwhile;
+      else :
+      endif;
+      ?>
     </div>
     <div class="lg:container lg:relative">
         <div class="swiper-button-next lg:flex">
@@ -75,3 +58,4 @@
         <div class="swiper-scrollbar hidden lg:flex"></div>
     </div>
   </div>
+  <?php endif; ?>

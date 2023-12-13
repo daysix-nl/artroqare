@@ -15,13 +15,13 @@ $image_url = isset($image['url']) ? esc_url($image['url']) : '';
 $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
 ?>
 <!-- HEADER 1 -->
-<section id="<?php the_field('id');?>" class="md:min-h-[512.99px] lg:min-h-[790.47px] xl:min-h-[850.47px] w-full relative overflow-hidden <?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
-    <div class="z-[50] relative container mt-[100px] md:mt-[96px] lg:mt-[170px] grid gap-2 md:gap-3 mb-[421px] md:mb-[unset] h-fit">
+<section id="<?php the_field('id');?>" class="h-fit md:min-h-[512.99px] lg:min-h-[790.47px] xl:min-h-[850.47px] w-full relative overflow-hidden <?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
+    <div class="z-[50] relative container mt-[395px] md:mt-[96px] lg:mt-[170px] grid gap-2 md:gap-3 mb-[40px] md:mb-[unset] h-fit justify-end">
         <?php if (get_field('titel')): ?>   
-        <h1 class="text-40 leading-40 md:text-45 md:leading-45 lg:text-85 lg:leading-85 font-britti font-normal max-w-[215px] md:max-w-[242px] lg:max-w-[457px] text-donkergroen"><?php the_field('titel');?></h1>
+        <h1 class="text-40 leading-40 md:text-45 md:leading-45 lg:text-85 lg:leading-85 font-britti font-normal md:max-w-[344px] lg:max-w-[521px] xl:max-w-[554px] text-groen"><?php the_field('titel');?></h1>
         <?php endif; ?>
         <?php if (get_field('tekst')): ?>   
-        <div class="text-18 leading-28 lg:text-22 lg:leading-47 font-britti font-normal md:max-w-[344px] lg:max-w-[521px] text-donkergroen text-editor"><?php the_field('tekst');?></div>
+        <div class="text-18 leading-28 lg:text-22 lg:leading-47 font-britti md:max-w-[344px] lg:max-w-[521px] xl:max-w-[554px] text-[#064F51] font-normal text-editor"><?php the_field('tekst');?></div>
         <?php endif; ?>
         <?php if (get_field('link')): ?>  
         <a href="<?php echo $link_url; ?>" class="w-fit h-[45px] px-[15px] bg-[#FFE863] rounded-[6px] flex items-center font-britti font-normal md:text-19 lg:text-22 text-donkergroen hover:bg-[#95CD6C] duration-300" target="<?php echo $link_target; ?>"><?php echo $link_text; ?>
@@ -37,9 +37,9 @@ $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
         </a>
         <?php endif; ?>
     </div>
-    <div class="h-[448.41px] w-[381.31px] md:h-[588.99px] md:w-[464.23px] lg:h-[1285.47px] lg:w-[1085.97px] bg-[#D4EAC6] absolute bottom-0 md:bottom-[unset] md:top-[-76px] right-[-63px] md:right-[-63px] lg:top-[-495px] lg:right-[-281px] xl:top-[-450px] xl:right-[-241px] rounded-[50%/50%] overflow-hidden">
-        <div class="absolute bottom-0 left-[0px] lg:left-[109px]">
-            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="h-[352px] md:h-[431.99px] lg:h-[800.47px] xl:h-[820.47px]">
+    <div class="h-[770.65px] w-[630.06px] md:h-[712.98px] md:w-[582.91px] lg:h-[996.82px] lg:w-[895.62px] xl:h-[1030.82px] xl:w-[926.17px] bg-[#D4EAC6] absolute top-[-386px]  md:top-[-250px] left-[-60px] md:left-[-218px] lg:top-[-226px] lg:left-[-325px] xl:top-[-226px] xl:left-[-228px] rounded-[50%/50%] overflow-hidden">
+        <div class="absolute bottom-0 left-0 right-[0px]">
+            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="min-h-[380px] md:min-h-[470px] lg:min-h-[780px] xl:min-h-[820px] object-cover object-center min-w-full">
         </div>
     </div>
 </section>

@@ -4,7 +4,7 @@ if (isset($block['data']['preview_image_help'])): ?>
     <?php
 else: ?>
 <!-- CONTACT -->
-<section id="<?php the_field('id');?>" class="<?php the_field('achtergrond');?> py-5 lg:py-10">
+<section id="<?php the_field('id');?>" class="<?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
     <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-3 lg:gap-[unset]">
         <div class="grid gap-2 md:gap-3 lg:max-w-[471px] h-fit">
             <?php if (get_field('titel')): ?>       

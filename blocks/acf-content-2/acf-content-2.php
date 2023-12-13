@@ -17,7 +17,7 @@ $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
 <!-- CONTENT 2 -->
 <?php if (get_field('afbeelding_uitlijning') !== "afb-links"): ?>   
 <!-- AFBEELDING RECHTS -->
-<section id="<?php the_field('id');?>" class="overflow-hidden">
+<section id="<?php the_field('id');?>" class="overflow-hidden <?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
     <div class="flex flex-col md:flex-row">
         <div class="md:w-[65vw] lg:w-[50vw] lg:h-[50vw] flex items-center justify-center <?php the_field('achtergrond');?>">
             <div class="w-[337px] px-[15px] py-[40px] md:py-[unset] md:px-[unset] md:w-[441px] lg:w-[485px] xl:w-[546px] grid gap-2 md:gap-3">
@@ -51,7 +51,7 @@ $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
 
 <?php if (get_field('afbeelding_uitlijning') !== "afb-rechts"): ?>   
 <!-- AFBEELDING LINKS -->
-<section id="<?php the_field('id');?>" class="overflow-hidden">
+<section id="<?php the_field('id');?>" class="overflow-hidden <?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
     <div class="flex flex-col md:flex-row">
         <div class="md:w-[65vw] lg:w-[50vw] lg:h-[50vw] flex items-center justify-center order-2 <?php the_field('achtergrond');?>">
             <div class="w-[337px] px-[15px] py-[40px] md:py-[unset] md:px-[unset] md:w-[441px] lg:w-[485px] xl:w-[546px] grid gap-2 md:gap-3">

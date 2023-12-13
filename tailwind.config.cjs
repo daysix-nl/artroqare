@@ -38,6 +38,7 @@ module.exports = {
         lichtgroen: "#D4EAC6",
         groen: "#95CD6C",
         donkergroen: "#064F51",
+        grijs: "#E7E7E7",
       },
       content: {
         empty: '""',

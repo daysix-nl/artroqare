@@ -1,9 +1,9 @@
 {
-  "name": "acf-slider-1",
-  "title": "Slider 1",
+  "name": "acf-header-2",
+  "title": "Header 2",
   "description": "",
   "category": "bibliotheek",
-  "icon": "slides",
+  "icon": "align-full-width",
   "keywords": [
     "block"
   ],
@@ -13,13 +13,13 @@
   },
   "acf": {
     "mode": "preview",
-    "renderTemplate": "acf-slider-1.php"
+    "renderTemplate": "acf-header-2.php"
   },
   "example": {
     "attributes": {
       "mode": "preview",
       "data": {
-        "preview_image_help": "/wp-content/themes/artroqare/img/preview-images/leeg.jpeg",
+        "preview_image_help": "/wp-content/themes/artroqare/img/local/leeg.png",
         "is_preview": true
       }
     }

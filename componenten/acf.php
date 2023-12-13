@@ -11,6 +11,7 @@
 <div class="bg-groen"></div>
 <div class="bg-lichtgroen"></div>
 <div class="bg-donkergroen"></div>
+<div class="bg-grijs"></div>
 
 
 

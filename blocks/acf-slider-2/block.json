@@ -3,8 +3,10 @@
   "title": "Slider 2",
   "description": "",
   "category": "bibliotheek",
-  "icon": "editor-alignleft",
-  "keywords": ["block"],
+  "icon": "slides",
+  "keywords": [
+    "block"
+  ],
   "supports": {
     "mode": false,
     "jsx": true
