@@ -117,28 +117,31 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 try {
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.querySelector(".button-lees-meer");
-    const btnText = btn.querySelector("span");
-    const paragraphs = document.querySelectorAll(".dynamic-paragraph");
-    let isVisibleCount = 1;
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".section-content-4");
 
-    paragraphs[0].classList.add("visible");
+    sections.forEach((section) => {
+      const btn = section.querySelector(".button-lees-meer");
+      const paragraphs = section.querySelectorAll(".dynamic-paragraph");
+      let isVisibleCount = 1;
 
-    btn.addEventListener("click", function () {
-      if (isVisibleCount < paragraphs.length) {
-        paragraphs[isVisibleCount].classList.add("visible");
-        isVisibleCount++;
-        if (isVisibleCount === paragraphs.length) {
-          btnText.innerText = "Lees minder";
+      paragraphs[0].classList.add("visible");
+
+      btn.addEventListener("click", () => {
+        if (isVisibleCount < paragraphs.length) {
+          paragraphs[isVisibleCount].classList.toggle("visible");
+          isVisibleCount++;
+          if (isVisibleCount === paragraphs.length) {
+            btn.querySelector("span").innerText = "Lees minder";
+          }
+        } else {
+          for (let i = 1; i < paragraphs.length; i++) {
+            paragraphs[i].classList.remove("visible");
+          }
+          isVisibleCount = 1;
+          btn.querySelector("span").innerText = "Lees meer";
         }
-      } else {
-        for (let i = 1; i < paragraphs.length; i++) {
-          paragraphs[i].classList.remove("visible");
-        }
-        isVisibleCount = 1;
-        btnText.innerText = "Lees meer";
-      }
+      });
     });
   });
 } catch (error) {}

@@ -3,7 +3,7 @@ if (isset($block['data']['preview_image_help'])): ?>
     <img src="#" style="width:100%; height:auto;">
     <?php
 else: ?>
-    <section id="<?php the_field('id');?>" class="<?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?>">
+    <section id="<?php the_field('id');?>" class="<?php the_field('achtergrond');?> <?php the_field('padding_top');?> <?php the_field('padding_bottom');?> section-content-4">
         <div class="container lg:max-w-[645px]">
             <h3 class="text-[#064F51] font-britti font-normal text-40 leading-40 pb-2 lg:pb-3 md:leading-40  lg:text-82 lg:leading-78 xl:text-85"><?php the_field('titel');?></h3>
             <p class="text-[#064F51] font-britti font-normal text-18 leading-28 pb-2 lg:pb-3 lg:text-22 lg:leading-47 dynamic-paragraph"><?php the_field('alinae_1');?></p>
