@@ -704,3 +704,62 @@ function custom_frontend_translations($translated_text, $text, $domain) {
 
 add_filter('gettext', 'custom_frontend_translations', 20, 3);
 
+/*
+|--------------------------------------------------------------------------
+| store locator
+|--------------------------------------------------------------------------
+|
+| 
+| 
+|
+*/
+
+
+add_filter('wpsl_store_meta', 'custom_store_meta', 10, 2);
+
+function custom_store_meta($store_meta, $store_id) {
+
+  if (function_exists('z_taxonomy_image_url')) {
+    $terms = wp_get_post_terms($store_id, 'wpsl_store_category');
+
+    if ($terms) {
+      if (!is_wp_error($terms)) {
+        if (isset($_GET['filter']) && $_GET['filter']) {
+          $filter_ids = explode(',', $_GET['filter']);
+
+          foreach($terms as $term) {
+            if (in_array($term -> term_id, $filter_ids)) {
+              $cat_marker = z_taxonomy_image_url($term -> term_id);
+
+              if ($cat_marker) {
+                $store_meta['categoryMarkerUrl'] = $cat_marker;
+              }
+            }
+          }
+        } else {
+          $store_meta['categoryMarkerUrl'] = z_taxonomy_image_url($terms[0] -> term_id);
+        }
+      }
+    }
+  }
+
+  return $store_meta;
+}
+
+
+add_filter( 'wpsl_cpt_info_window_meta_fields', 'custom_cpt_info_window_meta_fields', 10, 2 );
+
+function custom_cpt_info_window_meta_fields( $meta_fields, $store_id ) {
+
+    $terms = wp_get_post_terms( $store_id, 'wpsl_store_category' );
+
+    if ( $terms ) {
+        if ( !is_wp_error( $terms ) ) {
+            if ( function_exists( 'z_taxonomy_image_url' ) ) {
+                $meta_fields['categoryMarkerUrl'] = z_taxonomy_image_url( $terms[0]->term_id );
+            }
+        }
+    }
+
+    return $meta_fields;
+}
