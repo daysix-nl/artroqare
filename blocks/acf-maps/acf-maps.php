@@ -36,7 +36,7 @@ $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                 <?php endif; ?>
             </div>
         </div>
-        <div class="hidden md:block w-full aspect-[100/50.51] md:w-[35vw] md:aspect-[69.53/100] lg:aspect-square lg:w-[50vw] lg:h-[50vw] overflow-hidden kaart">
+        <div class="block w-full aspect-[1/1] md:w-[35vw] md:aspect-[69.53/100] lg:aspect-square lg:w-[50vw] lg:h-[50vw] overflow-hidden kaart">
             <?php echo do_shortcode( '[wpsl]' ); ?>
         </div>
     </div>

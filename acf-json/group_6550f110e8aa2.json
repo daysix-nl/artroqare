@@ -58,7 +58,8 @@
                 "bg-white": "Wit",
                 "bg-geel": "Geel",
                 "bg-lichtgroen": "Licht groen",
-                "bg-groen": "Groen"
+                "bg-groen": "Groen",
+                "bg-donkergroen": "Donker groen"
             },
             "default_value": "bg-white",
             "return_format": "value",
@@ -147,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702480617
+    "modified": 1703150142
 }

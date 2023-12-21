@@ -19,7 +19,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class( 'page-block' ); ?>>
-<header id="site-header" class="fixed z-[9999] w-full h-[91px] flex items-center bg-transparent duration-300">
+<header id="site-header" class="fixed z-[9999] w-full h-[91px] flex items-center duration-300 bg-white">
     <div class="w-[337px] px-[15px] md:px-[unset] md:w-[728px] lg:w-[1130px] xl:w-[1274px] mx-auto">
         <div class="flex justify-between items-center">
             <a href="/" class="logo">
@@ -126,7 +126,7 @@
     </div>
 
 </header>
-
+<div class="pt-[91px]"></div>
     <div class="menu w-sreen blur-header pt-7 px-2 flex flex-col w-full z-50 h-auto pb-[38px] md:hidden">
         <div class="container mt-[31px]">
             <div class="relative">

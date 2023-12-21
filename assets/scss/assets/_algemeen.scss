@@ -434,3 +434,18 @@ html {
 .bg-groen .text-groen {
   color: #064F51 !important;
 }
+
+.bg-donkergroen .text-donkergroen {
+  color: #fff !important;
+}
+
+.bg-donkergroen .border-donkergroen {
+  border-color: #fff !important;
+
+  &.button-lees-meer:hover {
+    border-color: #fff !important;
+  }
+
+
+
+}

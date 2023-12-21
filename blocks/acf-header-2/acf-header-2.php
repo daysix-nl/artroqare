@@ -21,7 +21,7 @@ $image_alt = isset($image['alt']) ? esc_attr($image['alt']) : '';
         <h1 class="text-40 leading-40 md:text-45 md:leading-45 lg:text-85 lg:leading-85 font-britti font-normal md:max-w-[344px] lg:max-w-[521px] xl:max-w-[554px] text-groen"><?php the_field('titel');?></h1>
         <?php endif; ?>
         <?php if (get_field('tekst')): ?>   
-        <div class="text-18 leading-28 lg:text-22 lg:leading-47 font-britti md:max-w-[344px] lg:max-w-[521px] xl:max-w-[554px] text-[#064F51] font-normal text-editor"><?php the_field('tekst');?></div>
+        <div class="text-18 leading-28 lg:text-22 lg:leading-47 font-britti md:max-w-[344px] lg:max-w-[521px] xl:max-w-[554px] text-donkergroen font-normal text-editor"><?php the_field('tekst');?></div>
         <?php endif; ?>
         <?php if (get_field('link')): ?>  
         <a href="<?php echo $link_url; ?>" class="w-fit h-[45px] px-[15px] bg-[#FFE863] rounded-[6px] flex items-center font-britti font-normal md:text-19 lg:text-22 text-donkergroen hover:bg-[#95CD6C] duration-300" target="<?php echo $link_target; ?>"><?php echo $link_text; ?>

@@ -34,7 +34,7 @@
                             </svg>
                         </div>
                         <div class="ml-[7px]">
-                            <p class="font-britti text-26 leading-26 md:text-17 md:leading-17 lg:text-26 lg:leading-26 font-normal text-[#064F51]">ArtroQare</p>
+                            <p class="font-britti text-26 leading-26 md:text-17 md:leading-17 lg:text-26 lg:leading-26 font-normal text-donkergroen">ArtroQare</p>
                         </div>
                    </div>
                 </a>
@@ -49,7 +49,7 @@
                     $link_text = isset($link['title']) ? esc_html($link['title']) : '';
                     $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                     ?>
-                    <a href="<?php echo $link_url; ?>" class="font-britti text-16 leading-16 md:text-18 md:leading-18 lg:text-22 lg:leading-22 font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 w-fit"><?php echo $link_text; ?></a>
+                    <a href="<?php echo $link_url; ?>" class="font-britti text-16 leading-16 md:text-18 md:leading-18 lg:text-22 lg:leading-22 font-normal text-donkergroen hover:text-[#95CD6C] duration-300 w-fit"><?php echo $link_text; ?></a>
                     <?php
                     endwhile;
                 else :
@@ -66,7 +66,7 @@
                     $link_text = isset($link['title']) ? esc_html($link['title']) : '';
                     $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                     ?>
-                    <a href="<?php echo $link_url; ?>" class="font-britti text-16 leading-16 md:text-18 md:leading-18 lg:text-22 lg:leading-22 font-normal text-[#064F51] hover:text-[#95CD6C] duration-300 w-fit"><?php echo $link_text; ?></a>
+                    <a href="<?php echo $link_url; ?>" class="font-britti text-16 leading-16 md:text-18 md:leading-18 lg:text-22 lg:leading-22 font-normal text-donkergroen hover:text-[#95CD6C] duration-300 w-fit"><?php echo $link_text; ?></a>
                     <?php
                     endwhile;
                 else :
@@ -81,7 +81,7 @@
                     $link_text = isset($link['title']) ? esc_html($link['title']) : '';
                     $link_target = isset($link['target']) ? esc_attr($link['target']) : '';
                     ?>  
-                <a href="<?php echo $link_url; ?>" class="flex w-fit h-[45px] px-[15px] bg-[#FFE863] rounded-[6px] items-center font-britti font-normal text-19 md:text-19 lg:text-22 text-[#064F51] hover:bg-[#95CD6C] duration-300"><?php echo $link_text; ?>
+                <a href="<?php echo $link_url; ?>" class="flex w-fit h-[45px] px-[15px] bg-[#FFE863] rounded-[6px] items-center font-britti font-normal text-19 md:text-19 lg:text-22 text-donkergroen hover:bg-[#95CD6C] duration-300"><?php echo $link_text; ?>
                     <div class="ml-[15px]">
                         <svg width="15px" height="12.862883px" viewBox="0 0 15 12.862883" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -97,7 +97,7 @@
         </div>
     </div>
     <div class="container mt-[-12px] lg:mt-6 z-[0]">
-        <p class="font-britti font-normal text-12 leading-12 text-[#064F51] opacity-[0.5] text-right md:text-left">2023 - ArtroQare</p>
+        <p class="font-britti font-normal text-12 leading-12 text-donkergroen opacity-[0.5] text-right md:text-left">2023 - ArtroQare</p>
     </div>
 </footer>
 <?php wp_footer(); ?>

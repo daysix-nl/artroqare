@@ -8,3 +8,11 @@
     width: 50vw !important;
 
 }
+
+@media screen and (max-width: 768px) {
+    .kaart #wpsl-gmap {
+        height: 100vw !important;
+        width: 100vw !important;
+    }
+
+}
