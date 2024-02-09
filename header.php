@@ -166,8 +166,8 @@
                     </div>
                     <div class="h-[1px] w-full bg-[#707070] mb-[14px] mt-[24px]"></div>
                     <div class="flex flex-col">
-                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="#">Contact</a>
-                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="#">Privacy statement</a>
+                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="/contact/">Contact</a>
+                        <a class="text-22 leading-44 text-groen font-britti font-normal" href="/privacy">Privacy statement</a>
                     </div>
                     <div class="h-[1px] w-full bg-[#707070] mb-[23px] mt-[23px]"></div>
                     <div class="flex flex-col">
