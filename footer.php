@@ -97,7 +97,7 @@
         </div>
     </div>
     <div class="container mt-[-12px] lg:mt-6 z-[0]">
-        <p class="font-britti font-normal text-12 leading-12 text-donkergroen opacity-[0.5] text-right md:text-left">2023 - ArtroQare</p>
+        <p class="font-britti font-normal text-12 leading-12 text-donkergroen opacity-[0.5] text-right md:text-left">2024 - ArtroQare</p>
     </div>
 </footer>
 <?php wp_footer(); ?>
